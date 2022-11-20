@@ -36,4 +36,7 @@ function changeDimension() {
     }
 }
 
+const resetBtn = document.querySelector('#reset-btn');
+resetBtn.addEventListener('click', resetCellColor);
+
 createGrid(16, 16); // initial dimensions upon page load
