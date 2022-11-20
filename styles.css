@@ -1,6 +1,8 @@
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;
 }
 
 #grid-container {
@@ -8,4 +10,13 @@ body {
     height: 600px;
     width: 600px;
     border-style: solid;
+    background-color: white;
+}
+
+button {
+    border-style: solid;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px;
+    font-weight: bold;
 }

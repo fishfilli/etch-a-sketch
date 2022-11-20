@@ -12,5 +12,18 @@ function createGrid(rows, cols) {
 }
 
 function changeColor(e) {
-    e.target.style.backgroundColor = 'red';
+    e.target.style.backgroundColor = 'black';
+}
+
+
+const changeDimensionBtn = document.querySelector('#change-squares-btn');
+changeDimensionBtn.addEventListener('click', changeDimension);
+
+function changeDimension() {
+    let userInput = parseInt(prompt('Please enter a whole number between 2 and 100.', '2'));
+    if (Number.isInteger(userInput) && (userInput >= 2) && (userInput <= 100)) {
+        createGrid(userInput, userInput);
+    } else {
+        alert('Please enter a valid number!');
+    }
 }
