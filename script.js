@@ -6,7 +6,11 @@ function createGrid(rows, cols) {
     for (let i = 0; i < (rows * cols); i++) {
         let newCell = document.createElement('div');
         newCell.classList.add('grid-item');
+        newCell.addEventListener('mouseover', changeColor);
         gridContainer.appendChild(newCell);
     }
 }
 
+function changeColor(e) {
+    e.target.style.backgroundColor = 'red';
+}
